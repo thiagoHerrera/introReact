@@ -1,0 +1,61 @@
+/* Tipografía */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ===== Variables ===== */
+:root{
+  --bg: #f5f5f5;
+  --card: #ffffff;
+  --text: #222;
+  --muted: #666;
+  --primary: #00c48c;
+  --shadow: 0 10px 24px rgba(0,0,0,.12);
+  --radius: 18px;
+}
+
+/* ===== Reset básico ===== */
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+html, body, #root{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img{ max-width: 100%; display: block; }
+a{ color: inherit; text-decoration: none; }
+button, input, textarea{ font: inherit; }
+:focus-visible{ outline: 3px solid rgba(0,196,140,.35); outline-offset: 2px; }
+
+/* ===== Contenedor tipo “teléfono” ===== */
+#root{
+  display: grid;
+  place-items: start center;
+  padding: 24px;                /* espacio exterior para que se vea la sombra */
+}
+
+/* El div .app viene de tu App.jsx */
+.app{
+  width: 100%;
+  max-width: 430px;             /* ancho típico mobile */
+  background: var(--bg);        /* mantenemos gris clarito como en el mock */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);    /* da sensación de tarjeta flotante */
+  overflow: hidden;             /* redondeo limpio con el header curvo */
+  min-height: 100dvh;           /* ocupa alto de la vista móvil */
+}
+
+/* Utilidades genéricas por si las necesitás */
+.container{ padding: 0 16px 24px; }
+.text-muted{ color: var(--muted); }
+.card{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}

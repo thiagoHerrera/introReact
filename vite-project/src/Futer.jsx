@@ -1,11 +1,10 @@
-import React from 'react'
-
-const Futer = () => {
+import "./Futer.css";
+function Futer() {
   return (
-    <div>
-      
-    </div>
-  )
+    <footer className="futer">
+      <p>© 2025 FoodieApp</p>
+    </footer>
+  );
 }
 
-export default Futer
+export default Futer;

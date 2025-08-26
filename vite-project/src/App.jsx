@@ -1,13 +1,16 @@
-import React from 'react'
-import Encabezado from './Encabezado'
-import Futer from './Futer'
+import Encabezado from "./Encabezado";
+import Article from "./components/article/Article";
+import Futer from "./Futer";
+import "./App.css";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1>App</h1>
+    <div className="app">
+      <Encabezado />
+      <Article />
+      <Futer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
